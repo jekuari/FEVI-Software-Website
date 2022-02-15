@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FEVI Software</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="nav-left">
+                    <a href="index.html"><h2>FEVI Software</h2></a>
+                </div>
+                <div id="nav-right">
+                    <ul id="desktop-nav">
+                        <li><a>Portfolio</a></li>
+                        <li><a>about</a></li>
+                        <li><a>contact</a></li>
+                        <li><a>api</a></li>
+                    </ul>
+                </div>
+                <div id="nav-right-mobile">
+                    <img id="menu-icon" src="Resources/menu-white.svg">
+                </div>
+                <div id="mobile-menu-container">
+                    <div id="mobile-menu">
+                        <ul>
+                            <li><a>Portfolio</a></li>
+                            <li><a>about</a></li>
+                            <li><a>contact</a></li>
+                            <li><a>api</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="banner">
+                <div id="banner-image"></div>
+                <div id="darken">
+                </div>
+                <div id="banner-content">
+                    <div id="presentation">
+                        <div class="presentation-text">
+                            <img class="levedoper-photo" src="Resources/levedoper-photo.jpg"><br>
+                            <!-- <h1>FULLSTACK</h1> -->
+                            <h2>Ricardo feregrino</h2>
+                            <h3>21 Y/O</h3>
+                            <h5>Fullstack developer</h5>
+                        </div>
+                        <div class="presentation-text">
+                            <img class="levedoper-photo" src="Resources/andres-fevi.png" id="andres-picture"><br>
+                            <!-- <h1>BACKEND</h1> -->
+                            <h2>Andr&eacute;s villarreal</h2>
+                            <h3>20 Y/O</h3>
+                            <h5>Backend developer</h5>
+                        </div>
+                    </div>
+                    <a href="#intro-anchor"><div id="presentation-more">
+                        <h3 id="more-button-text">MORE</h3>
+                    </div></a>
+                </div>
+            </section>
+            <div id="intro-anchor"></div>
+            <section id="introduction">
+                <div id="AA" class="information-layout-container">
+                    <div id="AB" class="information-layout-box information-text">
+                        <h2>Our Projects</h2><br>
+                        <p>We've done around 10 main projects, websites, javascript apps. You can check them out on our Github:</p><br>
+                        <a href="https://github.com/levedoper" class="information-link">GITHUB</a>
+                    </div>
+                    <div id="AC" class="information-layout-box">
+                        <img src="Resources/Opened VS code.jpg" id="mysterious-organism-img">
+                    </div>
+                </div>
+                <div id="BA" class="information-layout-container">
+                    <div id="BB" class="information-layout-box">
+                        <p>&#60 html &#62<br>CSS{}<br>js( )</p>
+                    </div>
+                    <div id="BC" class="information-layout-box information-text">
+                        <h2>Our Skills</h2><br>
+                        <p>CSS, HTML, PHP, Javascript and Java.</p><br>
+                        <a href="https://github.com/levedoper" class="information-link">RESUME</a>
+                    </div>
+                </div>
+                <div id="CA" class="information-layout-container">
+                    <div id="CB" class="information-layout-box information-text">
+                        <h2>Contact info</h2><br>
+                        <p>ricardo@levedoper.com</p><br>
+                        <div id="social-media">
+                            <a href="https://www.twitter.com/LEVEDOPER"><img src="Resources/twitter-white.svg" id="twitter-icon" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p>&#169 FEVI 2021</p>
+            </footer>
+        </main>
+        <script>
+            let mobilemenu = false;
+            let navigation = document.getElementById('nav-right-mobile');
+            navigation.onclick = function(){
+                const menu = document.getElementById('mobile-menu-container');
+                if (mobilemenu === false) {
+                    menu.style.display = 'contents';
+                    mobilemenu = true;
+                } else {
+                    menu.style.display = 'none';
+                    mobilemenu = false;
+                }
+            }
+        </script>
+    </body>
+</html>
