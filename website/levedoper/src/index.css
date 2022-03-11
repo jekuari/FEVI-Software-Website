@@ -18,4 +18,10 @@ code {
 
 h1 {
   font-family: 'Righteous', cursive;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: 'Righteous', cursive;
+  font-size: 3rem;
 }

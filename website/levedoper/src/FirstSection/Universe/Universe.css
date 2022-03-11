@@ -1,6 +1,57 @@
 #Universe {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     color: white;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    transform: rotateX(-25deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+#Earth {
+    animation-name: spinEarth;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#Mars {
+    animation-name: spinMars;
+    animation-duration: 6000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#Jupiter {
+    animation-name: spinJupiter;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spinEarth { 
+    from { 
+        transform: rotateY(0deg) translateZ(75px); 
+    } to { 
+        transform: rotateY(360deg) translateZ(75px); 
+    }
+}
+
+@keyframes spinMars { 
+    from { 
+        transform: rotateY(0deg) translateZ(125px); 
+    } to { 
+        transform: rotateY(360deg) translateZ(125px); 
+    }
+}
+
+@keyframes spinJupiter { 
+    from { 
+        transform: rotateY(0deg) translateZ(175px); 
+    } to { 
+        transform: rotateY(360deg) translateZ(175px); 
+    }
 }
