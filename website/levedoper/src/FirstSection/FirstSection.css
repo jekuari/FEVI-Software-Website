@@ -1,0 +1,13 @@
+#FirstSection {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#FirstSection h1 {
+    font-size: 4rem;
+}

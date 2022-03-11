@@ -1,0 +1,173 @@
+#HexagonGallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 600px;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    background-color: transparent;
+    transform: rotateZ(-25deg);
+    font-size: 1.5rem;
+    position: absolute;
+    right: 5vw;
+    top: 10vh;
+}
+
+#HexagonGalleryContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    
+    
+}
+
+.ringFace {
+    width: 6rem;
+    height: 150px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#HexagonGalleryOne {
+    transform: rotateY(60deg) translateZ(10rem);
+}
+
+#HexagonGalleryTwo {
+    transform: rotateY(120deg) translateZ(10rem);
+}
+
+#HexagonGalleryThree {
+    transform: rotateY(180deg) translateZ(10rem);
+}
+
+#HexagonGalleryFour {
+    transform: rotateY(240deg) translateZ(10rem);
+}
+
+#HexagonGalleryFive {
+    transform: rotateY(300deg) translateZ(10rem);
+}
+
+#HexagonGallerySix {
+    transform: rotateY(360deg) translateZ(10rem);
+}
+
+#HexagonGalleryCube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    transform: rotateZ(25deg) translateY(-43.3px);
+}
+
+.IcosahedronFace {
+    position: absolute;
+    width: 0;
+	height: 0;
+    border-style: solid;
+    border-width: 0 50px 86.6px 50px;
+    border-color: transparent transparent rgb(245, 0, 0) transparent;
+    transform-origin: 50% 100%;
+ /* (border-left-width 50px + border-right-width 50px) * 0.8660254 = 86.60254px  border-bottom-width = EquilateralTriangle height */
+}
+
+#icoFace0 {
+    transform: translateZ(80.75px) rotateZ(90deg) rotateX(159.095deg);
+    border-color: transparent transparent rgb(76, 150, 146) transparent;
+}
+
+#icoFace1 {
+    transform: translateZ(80.75px) rotateZ(-90deg) rotateX(159.095deg);
+    border-color: transparent transparent rgb(49, 143, 138) transparent;
+}
+
+#icoFace2 {
+    transform: translateZ(-80.75px) rotateZ(90deg) rotateX(-159.095deg);
+    border-color: transparent transparent rgb(49, 129, 143) transparent;
+}
+
+#icoFace3 {
+    transform: translateZ(-80.75px) rotateZ(-90deg) rotateX(-159.095deg);
+    border-color: transparent transparent rgb(44, 151, 146) transparent;
+}
+
+#icoFace4 {
+    transform: rotateY(-90deg) translateZ(80.75px) rotateX(20.905deg);
+    border-color: transparent transparent rgb(123, 235, 229) transparent;
+}
+#icoFace5 {
+    transform: rotateY(-90deg) translateZ(80.75px) rotateX(159.095deg);
+    border-color: transparent transparent rgb(82, 142, 165) transparent;
+}
+#icoFace6 {
+    transform: rotateY(-90deg) translateZ(-80.75px) rotateX(-20.905deg);
+    border-color: transparent transparent rgb(74, 143, 139) transparent;
+}
+#icoFace7 {
+    transform: rotateY(-90deg) translateZ(-80.75px) rotateX(-159.095deg);
+    border-color: transparent transparent rgb(23, 62, 65) transparent;
+}
+#icoFace9 {
+    transform: translateY(80.75px) rotateX(69.095deg);
+    border-color: transparent transparent rgb(14, 56, 61) transparent;
+}
+#icoFace10 {
+    transform: translateY(80.75px) rotateX(-69.095deg);
+    border-color: transparent transparent rgb(21, 54, 56) transparent;
+}
+#icoFace11 {
+    transform: translateY(-80.75px) rotateX(110.905deg);
+    border-color: transparent transparent rgb(111, 195, 216) transparent;
+}
+#icoFace12 {
+    transform: translateY(-80.75px) rotateX(-110.905deg);
+    border-color: transparent transparent rgb(93, 164, 192) transparent;
+}
+#icoFace13 {
+    border-width: 86.6px 50px 0 50px;
+    border-color: rgb(41, 153, 144) transparent;
+    transform: translateY(-80.75px) translateX(50px) rotateX(-135deg) rotateY(-35.264deg) rotateZ(-8deg);
+}
+#icoFace14 {
+    border-width: 86.6px 50px 0 50px;
+    transform: translateY(-80.75px) translateX(50px) rotateX(135deg) rotateY(35.264deg) rotateZ(-8deg);
+    border-color: rgb(36, 124, 120) transparent;
+}
+#icoFace15 {
+    border-width: 86.6px 50px 0 50px;
+    transform: translateY(-80.75px) translateX(-50px) rotateX(-135deg) rotateY(35.264deg) rotateZ(8deg);
+    border-color: rgb(105, 214, 218) transparent;
+}
+#icoFace16 {
+    border-width: 86.6px 50px 0 50px;
+    transform: translateY(-80.75px) translateX(-50px) rotateX(135deg) rotateY(-35.264deg) rotateZ(8deg);
+    border-color: rgb(90, 189, 202) transparent;
+}
+#icoFace17 {
+    border-width: 86.6px 50px 0 50px;
+    transform: translateY(80.75px) translateX(50px) rotateX(45deg) rotateY(-35.264deg) rotateZ(-8deg);
+    border-color: rgb(0, 48, 54) transparent;
+}
+#icoFace18 {
+    border-width: 86.6px 50px 0 50px;
+    transform: translateY(80.75px) translateX(50px) rotateX(-45deg) rotateY(35.264deg) rotateZ(-8deg);
+    border-color: rgb(1, 57, 65) transparent;
+}
+#icoFace19 {
+    border-width: 86.6px 50px 0 50px;
+    transform: translateY(80.75px) translateX(-50px) rotateX(45deg) rotateY(35.264deg) rotateZ(8deg);
+    border-color: rgb(51, 107, 124) transparent;
+}
+#icoFace8 {
+    border-width: 86.6px 50px 0 50px;
+    transform: translateY(80.75px) translateX(-50px) rotateX(-45deg) rotateY(-35.264deg) rotateZ(8deg);
+    border-color: rgb(32, 124, 128) transparent;
+}
