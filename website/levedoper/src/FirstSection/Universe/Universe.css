@@ -1,5 +1,6 @@
 #Universe {
     color: white;
+    z-index: 10;
     width: 400px;
     height: 200px;
     display: flex;

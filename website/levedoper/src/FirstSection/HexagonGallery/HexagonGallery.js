@@ -8,7 +8,12 @@ export default class HexagonGallery extends Component {
         super(props);
         this.state = ({currentAngle: 0, interval1: '', faces: ''});
         this.createFaces = this.createFaces.bind(this);
+        this.handleHover = this.handleHover.bind(this);
     }
+    handleHover() {
+        this.props.onHover('Conocimientos');
+    }
+
     componentDidMount() {
         this.createFaces();
     }
@@ -21,7 +26,7 @@ export default class HexagonGallery extends Component {
     }
   render() {
     return (
-      <div id="HexagonGallery">
+      <div id="HexagonGallery" onMouseEnter={this.handleHover}>
           <div id="HexagonGalleryContainer">
                 <div id="HexagonGalleryOne" className='ringFace'><p>CSS</p></div>
                 <div id="HexagonGalleryTwo" className='ringFace'><p>REACT</p></div>
