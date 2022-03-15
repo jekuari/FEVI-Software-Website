@@ -1,0 +1,36 @@
+#NavBar {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#NavBar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: auto;
+    height: inherit;
+}
+
+#NavBar button {
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: background-color 0.25s ease-in-out;
+    text-shadow: 2px 2px #009189;
+    font-size: 1.4rem;
+}
+
+#NavBar button:hover {
+    background-color: #009189;
+    cursor: pointer;
+}
