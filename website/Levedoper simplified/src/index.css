@@ -33,7 +33,7 @@ p, button, li {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, p, button, img {
+h1, h2, h3, p, button, img, br {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
