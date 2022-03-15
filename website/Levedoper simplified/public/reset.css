@@ -29,10 +29,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1 !important;
     font-size: 16px;
 }
-ol, ul {
+ol, ul, li {
 	list-style: none;
 }
 blockquote, q {

@@ -14,23 +14,26 @@ code {
 }
 :root {
   --main-bg-color: rgb(14, 17, 22);
+  --website-blue: #009189;
 }
 
 h1 {
   font-family: 'Righteous', cursive;
-  font-size: 4rem;
 }
 
 h2 {
   font-family: 'Righteous', cursive;
-  font-size: 3rem;
 }
 
-p, button {
-  font-family: 'Spartan', sans-serif;
+h3 {
+  font-family: 'Righteous', cursive;
 }
 
-h1, h2, p, button {
+p, button, li {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, p, button, img {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */

@@ -1,0 +1,22 @@
+.PersonalCard {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.PersonalCard img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--website-blue);
+}
+
+.PersonalCard h3 {
+    font-size: 1.8rem;
+}
+
+.PersonalCard P {
+    font-size: 0.9rem;
+}

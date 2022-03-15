@@ -1,42 +1,26 @@
 import React, { Component } from 'react';
 import './FirstSection.css';
 
-import { default as HexagonGallery } from './HexagonGallery/HexagonGallery';
-import { default as Universe } from './Universe/Universe.js';
+import { default as PersonalCard } from './PersonalCard/PersonalCard';
+import image1 from './PersonalCard/Resources/ricardo-fevi.webp';
+import image2 from './PersonalCard/Resources/andres-fevi.webp';
+
+import backgroundVideo from './Resources/background.mp4';
 
 export default class FirstSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = ({SelectedSection: 'Pasa tu cursor por encima de un objeto'});
-    this.changeSelectedOption = this.changeSelectedOption.bind(this);
-  }
-  changeSelectedOption(value) {
-    switch (value) {
-      case 'Conocimientos':
-        this.setState({SelectedSection: 'Nuestros conocimientos'});
-      break;
-      case 'Portafolio':
-        this.setState({SelectedSection: 'Portafolio'});
-      break;
-      default:
-        this.setState({SelectedSection: value});
-    }
-  }
   render() {
     return (
-      <div id="FirstSection">
-          <h1>FEVI SOFTWARE</h1>
-          <div id="FirstSectionInstructions">
-            <p>(Navega haciendo click en los objetos)</p>
-            <h2 id="SelectedSection">{this.state.SelectedSection}</h2>
-          </div>
-          <p>Desarrollo web a la vanguardia.</p>
-          <HexagonGallery onHover={this.changeSelectedOption}/>
-          <div id="portfolioSection"> 
-            <Universe onHover={this.changeSelectedOption}/>
-            <div id="portfolioSectionShadow"></div>
-          </div>
+     <div id="FirstSection">
+       <div id="FirstSectionVideoContainer">
+        <video autoPlay loop muted id="backgroundVideo">
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+       </div>
+      <div id="FirstSectionOverlay">
+        <PersonalCard image={image1} devName="Ricardo Feregrino" devAge="21 AÑOS" devRole="FULLSTACK "/>
+        <PersonalCard image={image2} devName="Andr&eacute;s Villarreal" devAge="19 AÑOS" devRole="BACKEND " />
       </div>
+     </div>
     )
   }
 }

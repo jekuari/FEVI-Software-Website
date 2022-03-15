@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     height: 5rem;
-    background-color: var(--main-bg-color);
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,26 +11,27 @@
 }
 
 #NavSectionLeft {
+    height: 100%;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.25s ease-in-out;
+}
 
+#NavSectionLeft h1 {
+    font-size: 3rem;
+}
+
+
+#NavSectionLeft:hover {
+    background-color: #009189;
+    cursor: pointer;
 }
 
 #NavSectionRight {
     height: inherit;
+    width: auto;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-}
-
-#NavSectionRight button {
-    width: 10rem;
-    height: inherit;
-    background-color: transparent;
-    border: none;
-    color: white;
-    transition: background-color 0.25s ease-in-out;
-}
-
-#NavSectionRight button:hover {
-    background-color: #323232;
-    cursor: pointer;
 }
