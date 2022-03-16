@@ -1,7 +1,7 @@
 #SecondSectionContainer {
     width: 100%;
-    height: 200vh;
     z-index: 10;
+    height: max-content;
     position: relative;
     color: white;
     display: flex;
@@ -25,45 +25,12 @@
 
 #SecondSection {
     background-color: var(--website-blue);
-    height: 100%;
+    height: fit-content;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-}
-
-#SecondSectionContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100vw;
-    width: 70rem;
-    flex-direction: row;
-    top: 3rem;
-    position: relative;
-    flex-wrap: wrap;
-}
-
-#SecondSectionContent div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    max-width: 30rem;
-}
-
-#SecondSectionContent h4 {
-    font-size: 1.6rem;
-    margin-top: 2rem;
-    text-align: center;
-    width: 100vw;
-    max-width: 60rem;
-}
-
-#SecondSectionContent strong {
-    text-shadow: 2px 2px rgb(255, 120, 255);
 }
 
 #SecondSection h2 {
@@ -77,8 +44,114 @@
     text-align: center;
 }
 
-#SecondSection img {
+#SecondSectionMethodology {
     margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: repeat(5, 1fr);
     width: 100vw;
-    max-width: 30rem;
+    height: 200vh;
+    width: 70rem;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#SecondSectionMethodology strong {
+    text-shadow: 2px 2px rgb(255, 120, 255);
+}
+
+#SecondSectionFirst {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.MethodologyText {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.MethodologyText p {
+    font-size: 1.4rem;
+}
+
+.MethodologyText h4 {
+    font-size: 2.2rem;
+}
+
+#SecondSectionFisrtNumber {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-justify: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MethodologyNumber {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid white;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    box-shadow: 2px 2px rgb(255, 120, 255);
+    animation: numberAnimation 2s infinite linear;
+}
+
+#SecondSectionImage {
+    grid-template-columns: 3 / 4;
+    width: 100%;
+    overflow: hidden;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.MethodologyImage {
+    width: 100%;
+}
+
+@keyframes numberAnimation {
+    0% {
+        transform: translate(0.2rem, 0.2rem);
+    }
+
+    25% {
+        transform: translate(0.2rem, -0.2rem);
+    }
+
+    50% {
+        transform: translate(-0.2rem, -0.2rem);
+    }
+    75% {
+        transform: translate(-0.2rem, 0.2rem);
+    }
+    100% {
+        transform: translate(0.2rem, 0.2rem);
+    }
 }
