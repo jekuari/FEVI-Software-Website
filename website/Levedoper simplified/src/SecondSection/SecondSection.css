@@ -16,7 +16,7 @@
 }
 
 #SecondSectionCurves img {
-    width: 100vw;
+    width: 100%;
     transform-origin: bottom;
     transform: scaleY(50%) translateY(0.5rem);
     position: absolute;
@@ -26,7 +26,7 @@
 #SecondSection {
     background-color: var(--website-blue);
     height: fit-content;
-    width: 100vw;
+    width:100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -49,9 +49,9 @@
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: repeat(5, 1fr);
-    width: 100vw;
+    width: 95%;
+    max-width: 70rem;
     height: 200vh;
-    width: 70rem;
     flex-direction: row;
     position: relative;
     flex-wrap: wrap;
@@ -83,6 +83,7 @@
 
 .MethodologyText p {
     font-size: 1.4rem;
+    text-align: justify;
 }
 
 .MethodologyText h4 {
@@ -132,9 +133,19 @@
     flex-direction: column;
 }
 
+.parent {
+    position: relative;
+}
+
+.overflowhide {
+    overflow: hidden;
+}
+
 .MethodologyImage {
     width: 100%;
 }
+
+
 
 @keyframes numberAnimation {
     0% {
@@ -154,4 +165,71 @@
     100% {
         transform: translate(0.2rem, 0.2rem);
     }
+}
+
+.animatedBeneficiosButton {
+    position: absolute;
+    width: 15%;
+    bottom: 5%;
+    animation: BeneficiosButtonAnimation 2s infinite ease-in-out;
+}
+
+.OrangeWheel {
+    position: absolute;
+    top: 15%;
+    left: 2.8%;
+    width: 5%;
+    animation: OrangeWheelAnimation 2s infinite linear;
+}
+
+.OrangeWhatsapp {
+    position: absolute;
+    width: 5%;
+    bottom: 7%;
+    right: 4%;
+    animation: OrangeWhatsappAnimation 10s infinite ease-in-out;
+}
+
+@keyframes OrangeWhatsappAnimation {
+    0% {
+        transform: translateX(10rem);
+    }
+
+    10% {
+        transform: translateX(0px);
+    }
+
+
+}
+
+@keyframes OrangeWheelAnimation {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes BeneficiosButtonAnimation {
+    0% {
+        transform: translate(0rem, 0rem);
+    }
+    50% {
+        transform: translate(0rem, -0.5rem);
+    }
+}
+
+.animateLeft {
+    transition: all 1s ease-in-out;
+}
+
+.hideLeft {
+    transform: translateX(-10rem);
+    opacity: 0;
+}
+
+.showLeft {
+    transform: translateX(0px);
+    opacity: 1;
 }
