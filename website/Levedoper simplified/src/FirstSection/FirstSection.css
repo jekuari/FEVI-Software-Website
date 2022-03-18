@@ -1,6 +1,6 @@
 #FirstSection {
 
-    position: relative;
+    position: relative; 
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -32,7 +32,7 @@
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 50vw;
+    justify-content: space-evenly;
+    width: 100%;
     text-align: center;
 }

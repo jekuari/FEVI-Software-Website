@@ -1,15 +1,16 @@
 #SecondSectionContainer {
     width: 100%;
+    margin-top: -10%;
     z-index: 10;
-    height: max-content;
     position: relative;
     color: white;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 #SecondSectionCurves {
-    height: 6rem;
+    height: 15rem;
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -25,7 +26,6 @@
 
 #SecondSection {
     background-color: var(--website-blue);
-    height: fit-content;
     width:100%;
     display: flex;
     align-items: center;
@@ -46,14 +46,11 @@
 
 #SecondSectionMethodology {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: repeat(5, 1fr);
+    display: flex;
     width: 95%;
     max-width: 70rem;
-    height: 200vh;
+    min-width: 30rem;
     flex-direction: row;
-    position: relative;
     flex-wrap: wrap;
 }
 
@@ -61,16 +58,15 @@
     text-shadow: 2px 2px rgb(255, 120, 255);
 }
 
-#SecondSectionFirst {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
 .MethodologyText {
-    width: 100%;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+}
+
+.secondSectionNumber {
+    width: 20%;
 }
 
 .textLeft {
@@ -88,17 +84,7 @@
 
 .MethodologyText h4 {
     font-size: 2.2rem;
-}
-
-#SecondSectionFisrtNumber {
-    grid-column: 2 / 3;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    text-justify: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .MethodologyNumber {
@@ -114,14 +100,8 @@
     animation: numberAnimation 2s infinite linear;
 }
 
-#SecondSectionImage {
-    grid-template-columns: 3 / 4;
-    width: 100%;
-    overflow: hidden;
-}
-
 .center {
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -137,8 +117,12 @@
     position: relative;
 }
 
+.secondImgWrapper {
+    width: 40%;
+}
+
 .overflowhide {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .MethodologyImage {
@@ -232,4 +216,79 @@
 .showLeft {
     transform: translateX(0px);
     opacity: 1;
+}
+
+.threeSecCon {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+    #SecondSectionMethodology {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        width: 95%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .textLeft {
+        text-align: center;
+    }
+    
+    .textRight {
+        text-align: center;
+    }
+
+    .MethodologyText {
+        width: 90%;
+        justify-self: center;
+        margin-bottom: 2rem;
+    }
+
+    .secondImgWrapper {
+        width: 100%;
+    }
+
+    .MethodologyImage {
+        width: 90%;
+    }
+
+    .MethodologyText p, .MethodologyText h4 {
+        text-align: center;
+    }
+
+    .secondSectionLeft {
+        flex-direction: column;
+    }
+    .animatedBeneficiosButton {
+        position: absolute;
+        width: 15%;
+        bottom: 5%;
+        animation: BeneficiosButtonAnimation 2s infinite ease-in-out;
+    }
+    
+    .OrangeWheel {
+        left: 7.4%;
+    }
+    
+    .OrangeWhatsapp {
+        right: 8%;
+    }
+    .MethodologyNumber {
+        margin-bottom: 2rem;
+    }
+    .animateLeft {
+        transition: all 0.5s ease-in-out;
+    }
+
+    #SecondSection h2 {
+        font-size: 2.5rem;
+    }
+    #SecondSectionCurves img {
+        transform: scaleY(100%) translateY(0.5rem);
+    }
+    #SecondSectionContainer {
+        margin-top: -20%;
+    }
 }
