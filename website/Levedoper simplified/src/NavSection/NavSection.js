@@ -11,7 +11,7 @@ export default class NavSection extends Component {
             <h1>FEVI</h1>
           </div>
           <div id="NavSectionRight">
-              <NavBar />
+            {this.props.isMobile ? null : <NavBar />}
           </div>
       </div>
     )

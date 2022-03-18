@@ -7,12 +7,49 @@ import { default as FirstSection } from '../FirstSection/FirstSection';
 import { default as SecondSection } from '../SecondSection/SecondSection';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = ({webpSupport: true, isMobile: false});
+    this.detectIfWebpIsSupported = this.detectIfWebpIsSupported.bind(this);
+  }
+  componentDidMount() {
+    this.setState({webpSupport: this.detectIfWebpIsSupported()});
+    const eventListener1 = window.addEventListener('resize', () => {
+      this.detectMobile();
+    });
+    this.setState({eventListener1: eventListener1});
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.state.eventListener1);
+  }
+
+  detectMobile() {
+    if (window.innerWidth >= 640) {
+      this.setState({isMobile: false});
+    } else {
+      this.setState({isMobile: true});
+    }
+  }
+
+  detectIfWebpIsSupported() {
+    var elem = document.createElement('canvas');
+    if (!!(elem.getContext && elem.getContext('2d')))
+    {
+      return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
   render() {
     return (
       <div id="App">
-        <NavSection />
+        <NavSection isMobile={this.state.isMobile}/>
         <FirstSection />
-        <SecondSection />
+        <SecondSection webpSupport={this.state.webpSupport} isMobile={this.state.isMobile} />
       </div>
     )
   }

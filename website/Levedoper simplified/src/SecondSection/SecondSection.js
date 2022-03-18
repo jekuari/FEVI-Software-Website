@@ -12,6 +12,14 @@ import beneficiosButton from './resources/beneficiosButton.webp';
 import OrangeWheel from './resources/OrangeWheel.webp';
 import WhatsappLogo from './resources/whatsapp.webp';
 
+import PNGfirstStage from './resources/firstStage.png';
+import PNGwireframe from './resources/wireframe.png';
+import PNGthirdStage from './resources/thirdStage.png';
+import PNGfourthStage from './resources/fourthStage.png';
+import PNGbeneficiosButton from './resources/beneficiosButton.png';
+import PNGOrangeWheel from './resources/OrangeWheel.png';
+import PNGWhatsappLogo from './resources/whatsapp.png';
+
 export default class SecondSection extends Component {
   constructor(props) {
     super(props);
@@ -57,7 +65,7 @@ export default class SecondSection extends Component {
       if (scrollPos > getOffset(element).top) {
         numbersOfVisible.push(element.firstChild.innerHTML);
       }
-    });//ESTE ARRAY HAY QUE MODIFICARLO
+    });
     numbersOfVisible.forEach((x) => {
       if (styleLeft[x - 1] === { transform: 'translateX(0rem)', opacity: '1' }) {
         styleLeft.splice(x - 1, 1, { transform: 'translateX(-10rem)', opacity: '0' });
@@ -80,7 +88,7 @@ export default class SecondSection extends Component {
         </div>
         <div id="SecondSection">
           <h2>Metodolog&iacute;a</h2>
-          {window.innerWidth > 480 ? 
+          {!this.props.isMobile ? 
           <div id="SecondSectionMethodology">
           <div className='flex threeSecCon center secondSectionLeft'>
             <div className='MethodologyText animateLeft' style={this.state.styleLeft[0]}>
@@ -88,10 +96,10 @@ export default class SecondSection extends Component {
               <p>Con tu ayuda, identificaremos lo que tu p&aacute;gina necesita, te solicitaremos logotipos y recursos gr&aacute;ficos para el dise&ntilde;o de la misma.</p>
             </div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[0]}><p className='MethodologyNumber'><strong>1</strong></p></div>
-            <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[0]}><img src={firstStage} alt="Wireframe" className='MethodologyImage' /></div>
+            <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[0]}><img src={this.props.webpSupport ? firstStage : PNGfirstStage} alt="Wireframe" className='MethodologyImage' /></div>
           </div>
           <div className='flex threeSecCon center secondSectionLeft'>
-            <div className='flex center parent animateLeft secondImgWrapper  ' style={this.state.styleLeft[1]}><img src={wireframe} alt="Wireframe" className='MethodologyImage' /></div>
+            <div className='flex center parent animateLeft secondImgWrapper  ' style={this.state.styleLeft[1]}><img src={this.props.webpSupport ? wireframe : PNGwireframe} alt="Wireframe" className='MethodologyImage' /></div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[1]}><p className='MethodologyNumber'><strong>2</strong></p></div>
             <div className='MethodologyText animateLeft' style={this.state.styleRight[1]}>
               <h4><strong>Wireframe</strong></h4>
@@ -104,10 +112,10 @@ export default class SecondSection extends Component {
               <p>En esta etapa comenzamos con el dise&ntilde;o de la p&aacute;gina, se crea la versi&oacute;n de escritorio sin animaciones o funcionalidad. <br />Te entregaremos un link para que puedas ver el estado actual de tu p&aacute;gina.</p>
             </div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[2]}><p className='MethodologyNumber'><strong>3</strong></p></div>
-            <div className='flex center animateLeft secondImgWrapper' style={this.state.styleRight[2]}><img src={thirdStage} alt="Wireframe" className='MethodologyImage' /></div>
+            <div className='flex center animateLeft secondImgWrapper' style={this.state.styleRight[2]}><img src={this.props.webpSupport ? thirdStage : PNGthirdStage} alt="Wireframe" className='MethodologyImage' /></div>
           </div>
           <div className='flex threeSecCon center secondSectionLeft'>
-            <div className='flex center parent  animateLeft secondImgWrapper  ' style={this.state.styleLeft[3]}><div className='flex center parent'><img src={fourthStage} alt="Wireframe" className='MethodologyImage' /><img src={beneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={OrangeWheel} alt="" className='OrangeWheel' /></div></div>
+            <div className='flex center parent  animateLeft secondImgWrapper  ' style={this.state.styleLeft[3]}><div className='flex center parent'><img src={this.props.webpSupport ? fourthStage : PNGfourthStage} alt="Wireframe" className='MethodologyImage' /><img src={beneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={this.props.webpSupport ? OrangeWheel : OrangeWheel} alt="" className='OrangeWheel' /></div></div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[3]}><p className='MethodologyNumber'><strong>4</strong></p></div>
             <div className='MethodologyText animateLeft' style={this.state.styleRight[3]}>
               <h4><strong>Desarrollo</strong></h4>
@@ -120,7 +128,7 @@ export default class SecondSection extends Component {
               <p>Al finalizar el proyecto, te entregaremos el c&oacute;digo fuente, contrase&ntilde;as de acceso, asesor&iacute;a sobre la operaci&oacute;n del sitio, as&iacute; como todo recurso necesario para el correcto funcionamiento del sitio.</p>
             </div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[3]}><p className='MethodologyNumber'><strong>5</strong></p></div>
-            <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[4]}><div className='flex center parent overflowhide'><img src={fourthStage} alt="Wireframe" className='MethodologyImage' /><img src={beneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={OrangeWheel} alt="" className='OrangeWheel' /><img src={WhatsappLogo} alt="" className='OrangeWhatsapp' /></div></div>
+            <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[4]}><div className='flex center parent overflowhide'><img src={this.props.webpSupport ? fourthStage : PNGfourthStage} alt="Wireframe" className='MethodologyImage' /><img src={this.props.webpSupport ? beneficiosButton : PNGbeneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={this.props.webpSupport ? OrangeWheel : PNGOrangeWheel} alt="" className='OrangeWheel' /><img src={this.props.webpSupport ? WhatsappLogo : PNGWhatsappLogo} alt="" className='OrangeWhatsapp' /></div></div>
           </div>
         </div> : 
         // ORDEN PARA MOVIL
@@ -131,7 +139,7 @@ export default class SecondSection extends Component {
             <h4 className='textRight'><strong>Platicanos de tu p&aacute;gina</strong></h4>
             <p>Con tu ayuda, identificaremos lo que tu p&aacute;gina necesita, te solicitaremos logotipos y recursos gr&aacute;ficos para el dise&ntilde;o de la misma.</p>
           </div>
-          <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[0]}><img src={firstStage} alt="Wireframe" className='MethodologyImage' /></div>
+          <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[0]}><img src={this.props.webpSupport ? firstStage : PNGfirstStage} alt="Wireframe" className='MethodologyImage' /></div>
         </div>
         <div className='flex threeSecCon center secondSectionLeft'>
           <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[1]}><p className='MethodologyNumber'><strong>2</strong></p></div>
@@ -139,7 +147,7 @@ export default class SecondSection extends Component {
             <h4><strong>Wireframe</strong></h4>
             <p>Un wireframe es un bosquejo de c&oacute;mo podr&iacute;a lucir tu p&aacute;gina, te lo enviaremos en formato PDF para que nos digas qu&eacute; te gustar&iacute;a que fuera diferente, hacer cambios y que luzca como tu quieres.</p>
           </div>
-          <div className='flex center parent animateLeft secondImgWrapper  ' style={this.state.styleLeft[1]}><img src={wireframe} alt="Wireframe" className='MethodologyImage' /></div>
+          <div className='flex center parent animateLeft secondImgWrapper  ' style={this.state.styleLeft[1]}><img src={this.props.webpSupport ? wireframe : PNGwireframe} alt="Wireframe" className='MethodologyImage' /></div>
         </div>
         <div className='flex threeSecCon center secondSectionLeft'>
         <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[2]}><p className='MethodologyNumber'><strong>3</strong></p></div>
@@ -147,7 +155,7 @@ export default class SecondSection extends Component {
             <h4 className='textRight'><strong>Inicio del proyecto</strong></h4>
             <p>En esta etapa comenzamos con el dise&ntilde;o de la p&aacute;gina, se crea la versi&oacute;n de escritorio sin animaciones o funcionalidad. <br />Te entregaremos un link para que puedas ver el estado actual de tu p&aacute;gina.</p>
           </div>
-          <div className='flex center animateLeft secondImgWrapper' style={this.state.styleRight[2]}><img src={thirdStage} alt="Wireframe" className='MethodologyImage' /></div>
+          <div className='flex center animateLeft secondImgWrapper' style={this.state.styleRight[2]}><img src={this.props.webpSupport ? thirdStage : PNGthirdStage} alt="Wireframe" className='MethodologyImage' /></div>
         </div>
         <div className='flex threeSecCon center secondSectionLeft'>
           <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[3]}><p className='MethodologyNumber'><strong>4</strong></p></div>
@@ -155,7 +163,7 @@ export default class SecondSection extends Component {
             <h4><strong>Desarrollo</strong></h4>
             <p>Empezamos a agregar funcionalidad, animaciones, en esencia, toda la magia detr&aacute;s del sitio. Hacemos correcciones, cambios y ediciones a la p&aacute;gina, siempre en constante contacto contigo.</p>
           </div>
-          <div className='flex center parent  animateLeft secondImgWrapper  ' style={this.state.styleLeft[3]}><div className='flex center parent'><img src={fourthStage} alt="Wireframe" className='MethodologyImage' /><img src={beneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={OrangeWheel} alt="" className='OrangeWheel' /></div></div>
+          <div className='flex center parent  animateLeft secondImgWrapper  ' style={this.state.styleLeft[3]}><div className='flex center parent'><img src={this.props.webpSupport ? fourthStage : PNGfourthStage} alt="Wireframe" className='MethodologyImage' /><img src={this.props.webpSupport ? beneficiosButton : PNGbeneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={this.props.webpSupport ? OrangeWheel : PNGOrangeWheel} alt="" className='OrangeWheel' /></div></div>
         </div>
         <div className='flex threeSecCon center secondSectionLeft'>
         <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[3]}><p className='MethodologyNumber'><strong>5</strong></p></div>
@@ -163,7 +171,7 @@ export default class SecondSection extends Component {
             <h4 className='textRight'><strong>Finalizaci&oacute;n</strong></h4>
             <p>Al finalizar el proyecto, te entregaremos el c&oacute;digo fuente, contrase&ntilde;as de acceso, asesor&iacute;a sobre la operaci&oacute;n del sitio, as&iacute; como todo recurso necesario para el correcto funcionamiento del sitio.</p>
           </div>
-          <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[4]}><div className='flex center parent overflowhide'><img src={fourthStage} alt="Wireframe" className='MethodologyImage' /><img src={beneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={OrangeWheel} alt="" className='OrangeWheel' /><img src={WhatsappLogo} alt="" className='OrangeWhatsapp' /></div></div>
+          <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[4]}><div className='flex center parent overflowhide'><img src={this.props.webpSupport ? fourthStage : PNGfourthStage} alt="Wireframe" className='MethodologyImage' /><img src={this.props.webpSupport ? beneficiosButton : PNGbeneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={this.props.webpSupport ? OrangeWheel : PNGOrangeWheel} alt="" className='OrangeWheel' /><img src={this.props.webpSupport ? WhatsappLogo : PNGWhatsappLogo} alt="" className='OrangeWhatsapp' /></div></div>
         </div>
       </div>
           }
