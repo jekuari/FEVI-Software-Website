@@ -28,11 +28,14 @@ export default class PersonalCard extends Component {
     }
   render() {
     return (
-      <div className='PersonalCard'>
+      <div className='PersonalCard' style={this.props.alignment === 'right' && this.props.isMobile === true ? {flexDirection: 'row-reverse'} : {}} >
           <img src={this.props.image} alt="Desarrollador web" /><br/>
-          <h3 style={this.state.h3Style}>{this.props.devName}</h3><br/>
-          <p>{this.props.devAge}</p><br/>
-            <p>{this.props.devRole}<strong style={{color: 'var(--website-blue)', fontWeight: 'bold'}}>DEVELOPER</strong></p>
+          <div className='PersonalCardDescriptionContainer'>
+            <h3 style={this.state.h3Style}>{this.props.devName}</h3><br/>
+            <p>{this.props.devAge}</p><br/>
+              <p>{this.props.devRole}<strong style={{color: 'var(--website-blue)', fontWeight: 'bold'}}>DEVELOPER</strong></p>
+          </div>
+          
       </div>
     )
   }

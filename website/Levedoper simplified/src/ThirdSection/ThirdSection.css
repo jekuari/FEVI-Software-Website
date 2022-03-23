@@ -1,0 +1,72 @@
+#ThirdSection {
+     width: 100%;
+     height: 360vh;
+     color: black;
+     display: flex;
+     justify-content: center;
+     background-color: white;
+}
+
+#ThirdSectionStickyContainer {
+     position: sticky;
+     top: 5rem;
+     height: 100vh;
+     width: 50%;
+     background-color: rgb(255, 255, 255);
+     overflow-x: hidden;
+}
+
+.MessageBubble h2 {
+     padding: 3rem;
+}
+
+.MessageBubble a {
+     color: rgb(0, 95, 95);
+     text-decoration: underline;
+}
+
+.MessageBubble a:hover {
+     color: rgb(156, 114, 196);
+}
+
+.leftMessage {
+     background-color: rgb(183, 255, 255);
+     border-top-left-radius: 4rem;
+     border-top-right-radius: 4rem;
+     border-bottom-right-radius: 4rem;
+}
+
+.rightMessage {
+     background-color: rgb(226, 255, 183);
+     border-top-left-radius: 4rem;
+     border-top-right-radius: 4rem;
+     border-bottom-left-radius: 4rem;
+}
+
+@media only screen and (max-width: 1600px) {
+     #ThirdSectionStickyContainer {
+          width: 70%;
+     }
+}
+
+@media only screen and (max-width: 1200px) {
+     #ThirdSectionStickyContainer {
+          width: 80%;
+     }
+}
+
+@media only screen and (max-width: 800px) {
+     #ThirdSectionStickyContainer {
+          width: 90%;
+     }
+}
+
+@media only screen and (max-width: 480px) {
+     #ThirdSectionStickyContainer {
+          width: 100%;
+     }
+
+     .MessageBubble h2 {
+          padding: 2rem;
+     }
+}

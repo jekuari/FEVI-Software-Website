@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: max-content;
 }
 
 .PersonalCard img {
@@ -19,4 +20,26 @@
 
 .PersonalCard P {
     font-size: 0.9rem;
+}
+
+.PersonalCardDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 480px) {
+    .PersonalCard {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .PersonalCardDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .PersonalCard img {
+        height: 9rem;
+        width: 9rem;
+        border: 0.5rem solid var(--website-blue);
+    }
 }

@@ -17,8 +17,8 @@ export default class FirstSection extends Component {
         </video>
        </div>
       <div id="FirstSectionOverlay">
-        <PersonalCard image={image1} devName="Ricardo Feregrino" devAge="21 AÑOS" devRole="FULLSTACK "/>
-        <PersonalCard image={image2} devName="Andr&eacute;s Villarreal" devAge="19 AÑOS" devRole="BACKEND " />
+        <PersonalCard image={image1} devName="Ricardo Feregrino" devAge="21 AÑOS" devRole="FULLSTACK " alignment="left" isMobile={this.props.isMobile} />
+        <PersonalCard image={image2} devName="Andr&eacute;s Villarreal" devAge="19 AÑOS" devRole="BACKEND " alignment="right" isMobile={this.props.isMobile} />
       </div>
      </div>
     )
