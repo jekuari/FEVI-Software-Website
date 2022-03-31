@@ -6,7 +6,7 @@ export default class NavBar extends Component {
     return (
       <div id="NavBar">
           <ul>
-              <li><button>PORTAFOLIO</button></li>
+              <li><button>DESARROLLO</button></li>
               <li><button>CONTACTO</button></li>
               <li><button>NOSOTROS</button></li>
               <li><button>PROYECTOS</button></li>

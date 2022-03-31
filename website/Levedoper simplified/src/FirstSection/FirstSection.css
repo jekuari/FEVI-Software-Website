@@ -27,8 +27,7 @@
 }
 
 #FirstSectionOverlay {
-    top: 5rem;
-    position: sticky;
+    position: absolute;
     z-index: 1;
     display: flex;
     align-items: center;
