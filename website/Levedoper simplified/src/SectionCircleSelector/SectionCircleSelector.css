@@ -1,0 +1,16 @@
+.SectionCircleSelector {
+     position: fixed;
+     z-index: 50;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     background-color: rgba(100,100,100,0.5);
+     height: 20vh;
+     width: 1.5rem;
+     margin-left: 0.5rem;
+     border-radius: 0.5rem;
+}

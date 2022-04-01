@@ -1,11 +1,9 @@
-.fourthSectionContainer {
+#fourthSectionContainer {
      background-color: white;
 }
 
 .fourthSection {
      background-color: var(--website-bg);
-     height: 110vh;
-     min-height: 50rem;
      transition: opacity 0.4s linear;
      width: 100%;
      display: flex;
@@ -15,10 +13,11 @@
      flex-direction: column;
      position: relative;
      overflow-x: hidden;
+     min-height: 100vh;
 }
 
-.fourthSection h2 {
-     margin-top: 0rem;
+.fourthSectionTitle {
+     margin-bottom: 2rem;
 }
 
 .fourthSectionProfilesGallery {
@@ -54,5 +53,5 @@
 }
 
 @media only screen and (max-width: 700px) {
-
+     
 }

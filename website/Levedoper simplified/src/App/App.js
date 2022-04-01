@@ -7,6 +7,7 @@ import { default as FirstSection } from '../FirstSection/FirstSection';
 import { default as SecondSection } from '../SecondSection/SecondSection';
 import { default as ThirdSection } from '../ThirdSection/ThirdSection';
 import { default as FourthSection } from '../FourthSection/FourthSection';
+import { default as SectionCircleSelector } from '../SectionCircleSelector/SectionCircleSelector';
 
 export default class App extends Component {
   constructor(props) {
@@ -55,6 +56,7 @@ export default class App extends Component {
         <SecondSection webpSupport={this.state.webpSupport} isMobile={this.state.isMobile} />
         <ThirdSection isMobile={this.state.isMobile} />
         <FourthSection />
+        <SectionCircleSelector />
       </div>
     )
   }

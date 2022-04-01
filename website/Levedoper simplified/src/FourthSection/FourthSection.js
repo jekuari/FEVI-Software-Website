@@ -13,8 +13,8 @@ export default function FourthSection() {
     };
   });
   const handleScroll = () => {
-    const fourthSection = document.getElementsByClassName('fourthSectionContainer');
-    if (fourthSection[0].offsetTop < document.documentElement.scrollTop + (fourthSection[0].offsetHeight)/2 ) {
+    const fourthSection = document.getElementById('fourthSectionContainer');
+    if (fourthSection.offsetTop < document.documentElement.scrollTop + (fourthSection.offsetHeight)/2 ) {
       setFourthSectionStyle({opacity: 1});
       document.getElementById('NavSection').style = "background-color: var(--website-bg)";
     } else {
@@ -29,9 +29,9 @@ export default function FourthSection() {
   };
 
   return (
-    <div className='fourthSectionContainer'>
+    <div id='fourthSectionContainer'>
       <div className='fourthSection' style={fourthSectionStyle}>
-        <h2>EL EQUIPO</h2>
+        <h2 className='fourthSectionTitle'>EL EQUIPO</h2>
         <div className='fourthSectionProfilesGallery' style={galleryStyles === 'Left' ? {transform: 'translateX(25%)'} : {transform: 'translateX(-25%)'}}>
         <Ricardo />
         <Andres />
