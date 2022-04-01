@@ -15,7 +15,7 @@
     height: inherit;
 }
 
-#NavBar button {
+#NavBar input {
     width: 12rem;
     height: 5rem;
     display: flex;
@@ -28,9 +28,12 @@
     transition: background-color 0.25s ease-in-out;
     text-shadow: 2px 2px #009189;
     font-size: 1.4rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-#NavBar button:hover {
+#NavBar input:hover {
     background-color: #009189;
     cursor: pointer;
 }

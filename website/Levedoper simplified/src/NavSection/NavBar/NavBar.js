@@ -6,10 +6,10 @@ export default class NavBar extends Component {
     return (
       <div id="NavBar">
           <ul>
-              <li><button>DESARROLLO</button></li>
-              <li><button>CONTACTO</button></li>
-              <li><button>NOSOTROS</button></li>
-              <li><button>PROYECTOS</button></li>
+              <li><input type="button" value="DESARROLLO" /></li>
+              <li><input type="button" value="CONTACTO" /></li>
+              <li><input type="button" value="NOSOTROS" /></li>
+              <li><input type="button" value="PROYECTOS" /></li>
           </ul>
       </div>
     )

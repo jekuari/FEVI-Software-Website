@@ -28,7 +28,7 @@ export default class App extends Component {
   }
 
   detectMobile() {
-    if (window.innerWidth >= 640) {
+    if (window.innerWidth >= 700) {
       this.setState({isMobile: false});
     } else {
       this.setState({isMobile: true});

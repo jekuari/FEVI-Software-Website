@@ -16,7 +16,7 @@ code {
     monospace;
 }
 :root {
-  --main-bg-color: rgb(14, 17, 22);
+  --website-bg: #001113;
   --website-blue: #009189;
 }
 
@@ -30,10 +30,10 @@ h2 {
 }
 
 h3 {
-  font-family: 'Righteous', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
-p, button, li {
+p, button, li, input {
   font-family: 'Montserrat', sans-serif;
 }
 

@@ -223,7 +223,7 @@
     margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
     #SecondSectionMethodology {
         display: grid;
         grid-template-columns: 1fr;
