@@ -20,10 +20,9 @@
     transition: background-color 0.25s ease-in-out;
 }
 
-#NavSectionLeft h1 {
-    font-size: 3rem;
+#NavSectionLeft img {
+    height: 70%;
 }
-
 
 #NavSectionLeft:hover {
     background-color: #009189;

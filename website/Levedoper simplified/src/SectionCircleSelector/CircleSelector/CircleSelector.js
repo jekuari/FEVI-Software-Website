@@ -3,8 +3,8 @@ import './CircleSelector.css';
 
 export default function CircleSelector(props) {
   return (
-    <button className='CircleSelector' style={props.style} value={props.value} onClick={props.onClick}>
-
-    </button>
+    <div className='CircleSelector' style={props.style} >
+        <button value={props.value} onClick={props.onClick} />
+    </div>
   )
 }

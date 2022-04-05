@@ -3,6 +3,8 @@ import './NavSection.css';
 
 import { default as NavBar } from './NavBar/NavBar';
 
+import websiteLogo from '../Resources/logoWhite.svg';
+
 export default function NavSection(props) {
   const handleResize = () => {
     if (window.innerWidth >= 1000) {
@@ -22,7 +24,7 @@ export default function NavSection(props) {
   return (
     <div id="NavSection">
           <div id="NavSectionLeft">
-            <h1>FEVI</h1>
+            <img src={ websiteLogo } alt="logo" />
           </div>
           <div id="NavSectionRight">
             {typeOfMenu ? null : <NavBar />}

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import ricardo from '../../Resources/ricardo-fevi.webp';
+import andres from '../../Resources/andres-fevi.webp';
 
 export default function Ricardo() {
   return (
@@ -7,17 +7,17 @@ export default function Ricardo() {
           <h3>Andrés Villarreal</h3>
           <div className='fourthSectionInfo'>
                <div className='fourthSectionImageContainer'>
-                    <img src={ricardo} alt="" />
+                    <img src={andres} alt="" />
                </div>
                <article>
                     <p><strong>¿Cuál es tu rol?</strong><br/><br/>
-                    Líder de proyectos<br/><br/>
+                    Desarrollador de back-end.<br/><br/>
                     <strong>¿Qué haces exactamente?</strong><br/><br/>
-                    Me encargo de realizar o monitorear todo el proceso de desarrollo de los sitios o apliaciones web.<br/><br/>
+                    Me encargo de hacer posible que la pagina tenga un sistema de registro correcto y contacto con el usuario desde la pagina por medio de correos electrónicos.<br/><br/>
                     <strong>¿Cuáles son tus habilidades o conocimientos?</strong><br /><br/>
-                    Estoy certificado como Full-Stack Engineer y actualmente estudio ingeniería de Software en la Universidad Politécnica de Santa Rosa Jáuregui en Querétaro.<br /><br/>
+                    Actualmente estudio en la Universidad Autónoma de Nuevo León (UANL) Ingeniero Administrador en Sistemas en la Facultad de Ingeniería Mecánica y Eléctrica.<br /><br/>
                     <strong>¿Qué lenguajes y software sabes usar?</strong><br /><br/>
-                    HTML, CSS, JavaScript, PostgreSQL, WordPress, React.js, Express.js, SSH, Git, Adobe Photoshop, entre otros.
+                    HTML, CSS, PHP, C, C++, SQL, PHPMyAdmin, SSH, Git, Ubuntu.
                     </p>
                </article>
           </div>
