@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './FourthSection.css';
 import { default as Ricardo } from './profiles/Ricardo';
 import { default as Andres } from './profiles/Andres';
+import { default as Aldo } from './profiles/Aldo';
 import './profiles/profiles.css';
 
 export default function FourthSection() {
@@ -23,22 +24,40 @@ export default function FourthSection() {
     }
   };
 
-  const [galleryStyles, setGalleryStyles] = useState('Left');
+  const [galleryPosition, setGalleryPosition] = useState({transform: 'translateX(33.33%)'});
+
+  const [galleryStyles, setGalleryStyles] = useState('first');
   const handleOnClick = ({ target }) => {
     setGalleryStyles(target.value);
+    switch(target.value) {
+      case 'first':
+        setGalleryPosition({transform: 'translateX(33.33%)'});
+      break;
+      case 'second':
+        setGalleryPosition({transform: 'translateX(0%)'});
+      break;
+      case 'third':
+        setGalleryPosition({transform: 'translateX(-33.33%)'});
+      break;
+      default: 
+        console.log('Out of bounds');
+      break;
+    }
   };
 
   return (
     <div id='fourthSectionContainer'>
       <div className='fourthSection' style={fourthSectionStyle}>
         <h2 className='fourthSectionTitle'>EL EQUIPO</h2>
-        <div className='fourthSectionProfilesGallery' style={galleryStyles === 'Left' ? {transform: 'translateX(25%)'} : {transform: 'translateX(-25%)'}}>
+        <div className='fourthSectionProfilesGallery' style={galleryPosition}>
         <Ricardo />
         <Andres />
+        <Aldo />
         </div>
         <div className='selectedProfileCircles'>
-            <button onClick={handleOnClick} value="Left" style={galleryStyles === 'Left' ? {backgroundColor: 'white'} : {}}></button>
-            <button onClick={handleOnClick} value="Right" style={galleryStyles === 'Right' ? {backgroundColor: 'white'} : {}}></button>
+            <button onClick={handleOnClick} value="first" style={galleryStyles === 'first' ? {backgroundColor: 'white'} : {}}></button>
+            <button onClick={handleOnClick} value="second" style={galleryStyles === 'second' ? {backgroundColor: 'white'} : {}}></button>
+            <button onClick={handleOnClick} value="third" style={galleryStyles === 'third' ? {backgroundColor: 'white'} : {}}></button>
         </div>
       </div>
     </div>

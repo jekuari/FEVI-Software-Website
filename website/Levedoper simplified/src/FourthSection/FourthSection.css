@@ -22,7 +22,7 @@
 
 .fourthSectionProfilesGallery {
      display: flex;
-     width: 200vw;
+     width: 300vw;
      justify-content: right;
      transition: transform 0.6s ease-in-out;
 }
