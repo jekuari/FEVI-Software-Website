@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './FourthSection.css';
 import { default as Ricardo } from './profiles/Ricardo';
 import { default as Andres } from './profiles/Andres';
-import { default as Aldo } from './profiles/Aldo';
 import './profiles/profiles.css';
 
 export default function FourthSection() {
