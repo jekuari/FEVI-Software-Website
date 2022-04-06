@@ -83,9 +83,6 @@ export default class SecondSection extends Component {
   render() {
     return (
       <div id="SecondSectionContainer">
-        <div id="SecondSectionCurves">
-          <img src={waves} alt="" />
-        </div>
         <div id="SecondSection">
           <h2>Proceso de desarrollo</h2>
           {!this.props.isMobile ? 

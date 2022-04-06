@@ -3,10 +3,12 @@ import './ThirdSection.css';
 
 import { default as SendMessage } from './SendMessage/SendMessage';
 
+import phoneMockup from '../Resources/phoneMockup.svg';
+
 export default class ThirdSection extends Component {
      constructor(props) {
           super(props);
-          this.state = ({topOffset: 0, currentScroll: 0, height: 0, firstElementStyle: {}, secondElementStyle: {}, thirdElementStyle: {}, fourthElementStyle: {}, fifthElementStyle: {}});
+          this.state = ({topOffset: 0, currentScroll: 0, height: 0, firstElementStyle: {}, secondElementStyle: {}, thirdElementStyle: {}, fourthElementStyle: {}});
           this.getOffset = this.getOffset.bind(this);
           this.setCurrentScroll = this.setCurrentScroll.bind(this);
           this.setHeight = this.setHeight.bind(this);
@@ -14,7 +16,6 @@ export default class ThirdSection extends Component {
           this.moveSecondElement = this.moveSecondElement.bind(this);
           this.moveThirdElement = this.moveThirdElement.bind(this);
           this.moveFourthElement = this.moveFourthElement.bind(this);
-          this.moveFifthElement = this.moveFifthElement.bind(this);
      }
      componentDidMount() {
           this.getOffset(document.getElementById('ThirdSection'));
@@ -24,7 +25,7 @@ export default class ThirdSection extends Component {
           this.moveSecondElement();
           this.moveThirdElement();
           this.moveFourthElement();
-          this.moveFifthElement();
+
           const eventListener1 = window.addEventListener('scroll',() => {
                this.getOffset(document.getElementById('ThirdSection'));
                this.setCurrentScroll();
@@ -33,7 +34,7 @@ export default class ThirdSection extends Component {
                this.moveSecondElement();
                this.moveThirdElement();
                this.moveFourthElement();
-               this.moveFifthElement();
+
           });
           this.setState({eventListener1: eventListener1});
      }
@@ -63,7 +64,7 @@ export default class ThirdSection extends Component {
           } else if ( translation > 0.250) {
                translation = 0.250;
           }
-          this.setState({firstElementStyle: {position: 'absolute', left: 0, opacity: `${(translation * 8)}`, transform: `translateX(${translation * (this.props.isMobile ? 5 : 20)}rem) translateY(1vh)`}});
+          this.setState({firstElementStyle: {position: 'absolute', left: 0, opacity: `${(translation * 8)}`, transform: `translateX(${translation * (this.props.isMobile ? 7 : 7)}rem) translateY(17.5vh)`}});
      }
 
      moveSecondElement() {
@@ -73,7 +74,7 @@ export default class ThirdSection extends Component {
           } else if ( translation > 0.50) {
                translation = 0.50;
           }
-          this.setState({secondElementStyle: {position: 'absolute', right: 0, opacity: `${((translation - 0.250) * 8)}`, transform: `translateX(-${(translation - 0.250) * (this.props.isMobile ? 5 : 20)}rem) translateY(19vh)`}});
+          this.setState({secondElementStyle: {position: 'absolute', right: 0, opacity: `${((translation - 0.250) * 8)}`, transform: `translateX(-${(translation - 0.250) * (this.props.isMobile ? 7 : 7)}rem) translateY(32.5vh)`}});
      }
 
      moveThirdElement() {
@@ -83,7 +84,7 @@ export default class ThirdSection extends Component {
           } else if ( translation > 0.75) {
                translation = 0.75;
           }
-          this.setState({thirdElementStyle: {position: 'absolute', left: 0, opacity:  `${((translation - 0.5) * 8)}`, transform: `translateX(${(translation - 0.5) * (this.props.isMobile ? 5 : 20)}rem) translateY(38vh)`}});
+          this.setState({thirdElementStyle: {position: 'absolute', left: 0, opacity:  `${((translation - 0.5) * 8)}`, transform: `translateX(${(translation - 0.5) * (this.props.isMobile ? 7 : 7)}rem) translateY(47.5vh)`}});
      }
 
      moveFourthElement() {
@@ -93,17 +94,15 @@ export default class ThirdSection extends Component {
           } else if ( translation > 1) {
                translation = 1;
           }
-          this.setState({fourthElementStyle: {position: 'absolute', right: 0, opacity: `${((translation - 0.75) * 8)}`, transform: `translateX(-${(translation - 0.75) * (this.props.isMobile ? 5 : 20)}rem) translateY(58vh)`}});
-     }
-
-     moveFifthElement() {
-          this.setState({fifthElementStyle: {position: 'absolute', top: '78vh'}});
+          this.setState({fourthElementStyle: {position: 'absolute', right: 0, opacity: `${((translation - 0.75) * 8)}`, transform: `translateX(-${(translation - 0.75) * (this.props.isMobile ? 7 : 7)}rem) translateY(62.5vh)`}});
      }
 
   render() {
     return (
       <div id="ThirdSection">
+           
           <div id='ThirdSectionStickyContainer'>
+               <img src={phoneMockup} alt="" className='phoneMockup'/>
                <div style={this.state.firstElementStyle} className="MessageBubble leftMessage">
                <h3>&iquest;C&oacute;mo empezamos?</h3>
                </div>
@@ -116,7 +115,7 @@ export default class ThirdSection extends Component {
                <div style={this.state.fourthElementStyle} className="MessageBubble rightMessage">
                <h3>Escr&iacute;belo abajo y env&iacute;alo.</h3>
                </div>
-               <div style={this.state.fifthElementStyle} className='SendAMessageContainer'>
+               <div className='SendAMessageContainer'>
                     <SendMessage />
                </div>
           </div>

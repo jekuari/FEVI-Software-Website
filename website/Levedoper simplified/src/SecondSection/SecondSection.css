@@ -1,6 +1,5 @@
 #SecondSectionContainer {
     width: 100%;
-    margin-top: -10%;
     z-index: 10;
     position: relative;
     color: white;
@@ -9,23 +8,7 @@
     overflow-x: hidden;
 }
 
-#SecondSectionCurves {
-    height: 15rem;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-}
-
-#SecondSectionCurves img {
-    width: 100%;
-    transform-origin: bottom;
-    transform: scaleY(50%) translateY(0.5rem);
-    position: absolute;
-}
-
-
 #SecondSection {
-    background-color: var(--website-blue);
     width:100%;
     display: flex;
     align-items: center;
@@ -35,11 +18,9 @@
 
 #SecondSection h2 {
     position: sticky;
-    top: 5rem;
     font-size: 3rem;
     text-shadow: 2px 2px rgb(255, 120, 255);
     z-index: 25;
-    background-color: var(--website-blue);
     width: 100%;
     text-align: center;
 }
@@ -287,9 +268,5 @@
     }
     #SecondSectionCurves img {
         transform: scaleY(100%) translateY(0.5rem);
-    }
-    #SecondSectionContainer {
-        margin-top: -30vh;
-        top: 0;
     }
 }
