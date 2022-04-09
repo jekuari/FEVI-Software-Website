@@ -18,6 +18,9 @@ export default class NavBar extends Component {
       case 'NOSOTROS': 
         document.getElementById('fourthSectionContainer').scrollIntoView();
       break;
+      case 'SERVICIOS':
+        document.getElementById('FifthSection').scrollIntoView();
+      break;
       default:
         console.log('out of bounds');
       break;
@@ -30,7 +33,7 @@ export default class NavBar extends Component {
               <li><input type="button" value="DESARROLLO" onClick={this.handleOnClick} /></li>
               <li><input type="button" value="CONTACTO" onClick={this.handleOnClick} /></li>
               <li><input type="button" value="NOSOTROS" onClick={this.handleOnClick} /></li>
-              <li><input type="button" value="PREGUNTAS" onClick={this.handleOnClick} /></li>
+              <li><input type="button" value="SERVICIOS" onClick={this.handleOnClick} /></li>
           </ul>
       </div>
     )

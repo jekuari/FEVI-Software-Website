@@ -5,7 +5,7 @@ import { default as CircleSelector } from './CircleSelector/CircleSelector';
 
 
 export default function SectionCircleSelector() {
-     const [currentSection, setCurrentSection] = useState([true, false, false, false]);
+     const [currentSection, setCurrentSection] = useState([true, false, false, false, false]);
      useEffect(() => {
           handleSections();
           window.addEventListener('scroll', handleSections);
@@ -13,13 +13,15 @@ export default function SectionCircleSelector() {
      }, []);
      const handleSections = () => {
           if (window.scrollY < document.getElementById('FirstSection').offsetHeight - window.innerHeight / 2) {
-               setCurrentSection([true, false, false, false]);
+               setCurrentSection([true, false, false, false, false]);
           } else if (window.scrollY + window.innerHeight / 2 > document.getElementById('SecondSectionContainer').offsetTop && window.scrollY < document.getElementById('SecondSectionContainer').offsetTop + document.getElementById('SecondSectionContainer').offsetHeight - window.innerHeight / 2) {
-               setCurrentSection([false, true, false, false]);
+               setCurrentSection([false, true, false, false, false]);
           } else if (window.scrollY + window.innerHeight / 2 > document.getElementById('ThirdSection').offsetTop && window.scrollY < document.getElementById('ThirdSection').offsetTop + document.getElementById('ThirdSection').offsetHeight - window.innerHeight / 2) {
-               setCurrentSection([false, false, true, false]);
-          } else if (window.scrollY + window.innerHeight / 2 > document.getElementById('fourthSectionContainer').offsetTop && window.scrollY < document.getElementById('fourthSectionContainer').offsetTop + document.getElementById('fourthSectionContainer').offsetHeight - window.innerHeight / 2) {
-               setCurrentSection([false, false, false, true]);
+               setCurrentSection([false, false, true, false, false]);
+          }  else if (window.scrollY + window.innerHeight / 2 > document.getElementById('fourthSectionContainer').offsetTop && window.scrollY < document.getElementById('fourthSectionContainer').offsetTop + document.getElementById('fourthSectionContainer').offsetHeight - window.innerHeight / 2) {
+               setCurrentSection([false, false, false, true, false]);
+          }  else if (window.scrollY + window.innerHeight / 2 > document.getElementById('FifthSection').offsetTop && window.scrollY < document.getElementById('FifthSection').offsetTop + document.getElementById('FifthSection').offsetHeight - window.innerHeight / 2) {
+               setCurrentSection([false, false, false, false, true]);
           }
      };
      const handleClick = ({target}) => {
@@ -36,6 +38,9 @@ export default function SectionCircleSelector() {
                case '3':
                     document.getElementById('fourthSectionContainer').scrollIntoView();
                break;
+               case '4':
+                    document.getElementById('SixthSection').scrollIntoView();
+               break;
                default:
                     console.log('unexpected');
                break;
@@ -43,10 +48,11 @@ export default function SectionCircleSelector() {
      };
   return (
     <div className='SectionCircleSelector'>
-              <CircleSelector value="0" style={currentSection[0] ? {backgroundColor: 'white'} : null} onClick={handleClick} />
-              <CircleSelector value="1" style={currentSection[1] ? {backgroundColor: 'white'} : null} onClick={handleClick} />
-              <CircleSelector value="2" style={currentSection[2] ? {backgroundColor: 'white'} : null} onClick={handleClick} />
-              <CircleSelector value="3" style={currentSection[3] ? {backgroundColor: 'white'} : null} onClick={handleClick} />
+              <CircleSelector value="0" style={currentSection[0] ? {backgroundColor: 'var(--website-text)'} : null} onClick={handleClick} />
+              <CircleSelector value="1" style={currentSection[1] ? {backgroundColor: 'var(--website-text)'} : null} onClick={handleClick} />
+              <CircleSelector value="2" style={currentSection[2] ? {backgroundColor: 'var(--website-text)'} : null} onClick={handleClick} />
+              <CircleSelector value="3" style={currentSection[3] ? {backgroundColor: 'var(--website-text)'} : null} onClick={handleClick} />
+              <CircleSelector value="4" style={currentSection[4] ? {backgroundColor: 'var(--website-text)'} : null} onClick={handleClick} />
      </div>
   )
 }

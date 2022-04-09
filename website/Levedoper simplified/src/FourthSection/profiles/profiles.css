@@ -6,6 +6,10 @@
      width: 100%;
 }
 
+.fourthSectionInfoWrapper strong {
+     color: var(--website-orange);
+}
+
 .fourthSectionInfoWrapper h3 {
      font-size: 2rem;
      margin-bottom: 2rem;

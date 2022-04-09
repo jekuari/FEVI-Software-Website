@@ -1,0 +1,33 @@
+#SixthSection {
+     height: 20vh;
+     width: 100%;
+     overflow-x: hidden;
+     background-color: var(--website-orange);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+#SixthSection h1 {
+     font-size: 2rem;
+}
+
+.SixthSectionSocials {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.SixthSectionSocials img {
+     width: 3rem;
+     margin: 1rem;
+}
+
+#footerInstagramButton {
+     width: 2.5rem;
+}
+
+.SixthSectionSocials img:hover {
+     cursor: pointer;
+}

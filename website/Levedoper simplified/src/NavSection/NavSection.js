@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './NavSection.css';
 
 import { default as NavBar } from './NavBar/NavBar';
+import { default as MobileNavBar } from './MobileNavBar/MobileNavBar';
 
 import websiteLogo from '../Resources/logoWhite.svg';
 
@@ -27,7 +28,7 @@ export default function NavSection(props) {
             <img src={ websiteLogo } alt="logo" />
           </div>
           <div id="NavSectionRight">
-            {typeOfMenu ? null : <NavBar />}
+            {typeOfMenu ? <MobileNavBar /> : <NavBar />}
           </div>
       </div>
   )

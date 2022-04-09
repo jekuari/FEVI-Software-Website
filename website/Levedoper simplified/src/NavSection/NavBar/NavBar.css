@@ -33,6 +33,6 @@
 }
 
 #NavBar input:hover {
-    background-color: #009189;
+    background-color: var(--website-blue);
     cursor: pointer;
 }

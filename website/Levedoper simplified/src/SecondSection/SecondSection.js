@@ -90,7 +90,7 @@ export default class SecondSection extends Component {
           <div className='flex threeSecCon center secondSectionLeft'>
             <div className='MethodologyText animateLeft' style={this.state.styleLeft[0]}>
               <h4 className='textRight'><strong>Platicanos de tu p&aacute;gina</strong></h4>
-              <p>Con tu ayuda, identificaremos lo que tu p&aacute;gina necesita, te solicitaremos logotipos y recursos gr&aacute;ficos para el dise&ntilde;o de la misma.</p>
+              <p className='alisele'>Con tu ayuda, identificaremos lo que tu p&aacute;gina necesita, te solicitaremos logotipos y recursos gr&aacute;ficos para el dise&ntilde;o de la misma.</p>
             </div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[0]}><p className='MethodologyNumber'><strong>1</strong></p></div>
             <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[0]}><img src={this.props.webpSupport ? firstStage : PNGfirstStage} alt="Wireframe" className='MethodologyImage' /></div>
@@ -106,7 +106,7 @@ export default class SecondSection extends Component {
           <div className='flex threeSecCon center secondSectionLeft'>
             <div className='MethodologyText  animateLeft  ' style={this.state.styleLeft[2]}>
               <h4 className='textRight'><strong>Inicio del proyecto</strong></h4>
-              <p>En esta etapa comenzamos con el dise&ntilde;o de la p&aacute;gina, se crea la versi&oacute;n de escritorio sin animaciones o funcionalidad. <br />Te entregaremos un link para que puedas ver el estado actual de tu p&aacute;gina.</p>
+              <p className='alisele'>En esta etapa comenzamos con el dise&ntilde;o de la p&aacute;gina, se crea la versi&oacute;n de escritorio sin animaciones o funcionalidad. <br />Te entregaremos un link para que puedas ver el estado actual de tu p&aacute;gina.</p>
             </div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[2]}><p className='MethodologyNumber'><strong>3</strong></p></div>
             <div className='flex center animateLeft secondImgWrapper' style={this.state.styleRight[2]}><img src={this.props.webpSupport ? thirdStage : PNGthirdStage} alt="Wireframe" className='MethodologyImage' /></div>
@@ -122,7 +122,7 @@ export default class SecondSection extends Component {
           <div className='flex threeSecCon center secondSectionLeft'>
             <div className='MethodologyText  animateLeft' style={this.state.styleLeft[4]}>
               <h4 className='textRight'><strong>Finalizaci&oacute;n</strong></h4>
-              <p>Al finalizar el proyecto, te entregaremos el c&oacute;digo fuente, contrase&ntilde;as de acceso, asesor&iacute;a sobre la operaci&oacute;n del sitio, as&iacute; como todo recurso necesario para el correcto funcionamiento del sitio.</p>
+              <p className='alisele'>Al finalizar el proyecto, te entregaremos el c&oacute;digo fuente, contrase&ntilde;as de acceso, asesor&iacute;a sobre la operaci&oacute;n del sitio, as&iacute; como todo recurso necesario para el correcto funcionamiento del sitio.</p>
             </div>
             <div className='flex center animateLeft secondSectionNumber' style={this.state.styleCenter[4]}><p className='MethodologyNumber'><strong>5</strong></p></div>
             <div className='flex center parent animateLeft secondImgWrapper' style={this.state.styleRight[4]}><div className='flex center parent overflowhide'><img src={this.props.webpSupport ? fourthStage : PNGfourthStage} alt="Wireframe" className='MethodologyImage' /><img src={this.props.webpSupport ? beneficiosButton : PNGbeneficiosButton} alt="" className="animatedBeneficiosButton" /><img src={this.props.webpSupport ? OrangeWheel : PNGOrangeWheel} alt="" className='OrangeWheel' /><img src={this.props.webpSupport ? WhatsappLogo : PNGWhatsappLogo} alt="" className='OrangeWhatsapp' /></div></div>
