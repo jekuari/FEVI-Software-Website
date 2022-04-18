@@ -1,0 +1,9 @@
+
+#MobileNavBar {
+     height: 100%;
+}
+
+#MobileNavBar img {
+     height: 100%;
+     cursor: pointer;
+}
