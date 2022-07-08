@@ -16,7 +16,7 @@ export default function FifthSection() {
         </div>
         <div className='FifthSectionColumn'>
           <h3>LANDING PAGES</h3>
-          <p>Sabemos lo importante es la página de una empresa, desarrollamos tu sitio completamente personalizado, hecho a la medida, <strong>utilizamos la identidad de tu empresa como base para el desarrollo.</strong></p>
+          <p>Sabemos lo importante que es la página de una empresa, desarrollamos tu sitio completamente personalizado, hecho a la medida, <strong>utilizamos la identidad de tu empresa como base para el desarrollo.</strong></p>
         </div>
         <div className='FifthSectionColumn'>
           <h3>WEB APPS</h3>
