@@ -40,29 +40,35 @@ export default function Calculator() {
             <img src={logo} alt="Fevi Software logo" />
             <h1>CALCULADORA DE OPERADORES</h1>
          </div>
+         <h2>CALCULADORA DE OPERADORES POR PASOS</h2>
          <form>
             <input type="text" placeholder='INGRESA LA ECUACI&Oacute;N' onChange={handleOnChange} className='OperatorCalcInput' />
-            <input type="button" value="calcular" onClick={handleCalculate} />
+            <input type="button" value="CALCULAR" onClick={handleCalculate} />
          </form>
-         <p className='Instructions'>
-            <span className='colorRed'>RECUERDA AGREGAR PARENTESIS AL PRINCIPIO Y FINAL DEL PROBLEMA.</span><br /><br />
-            RECUERDA QUE LOS S&Iacute;MBOLOS PERMITIDOS SON:
+         <div className='Instructions'>
+            <p>Esta calculadora te permitirá realizar calculos de operadores y aritméticos por pasos.<br/>
+            ingresa la ecuación en el campo de texto y presiona el botón "CALCULAR" para obtener los resultados.
+            </p><br/>
+            <p className='colorRed'>RECUERDA AGREGAR PARENTESIS AL PRINCIPIO Y FINAL DEL PROBLEMA.</p><br /><br />
+            <p>RECUERDA QUE LOS S&Iacute;MBOLOS PERMITIDOS SON:</p><br/>
             <ul>
-               <li>"&&" - AND </li>
-               <li>"||" - OR </li>
-               <li>"!=" - no es igual</li>
-               <li>"==" - igualdad</li>
-               <li>"+" - suma</li>
-               <li>"|" - exponente</li>
-               <li>"-" - resta</li>
-               <li>"*" - multiplicaci&oacute;n</li>
-               <li>"/" - divisi&oacute;n</li>
-               <li>"MOD" - modulo</li>
-               <li>"!!" - NOT </li>
+               <li>&bull;   "||" - OR </li>
+               <li>&bull;   "!=" - no es igual</li>
+               <li>&bull;   "&&" - AND </li>
+               <li>&bull;   "==" - igualdad</li>
+               <li>&bull;   "+" - suma</li>
+               <li>&bull;   "|" - exponente</li>
+               <li>&bull;   "-" - resta</li>
+               <li>&bull;   "*" - multiplicaci&oacute;n</li>
+               <li>&bull;   "/" - divisi&oacute;n</li>
+               <li>&bull;   "MOD" - modulo</li>
+               <li>&bull;   "!!" - NOT </li>
             </ul>
-         </p>
+         </div>
          <h3>RESULTADO:</h3>
-         {arrOfResults}
+         <div className='resultsContainer'>
+            {arrOfResults}
+         </div>
       </div>
    )
 }

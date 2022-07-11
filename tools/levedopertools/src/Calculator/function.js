@@ -129,6 +129,9 @@ const solveArithmetic = (equationAsString, arrayOfAnswers) => {
             const charactersIndex = currentParenthesis.indexOf('+');
             result = parseInt(currentParenthesis[charactersIndex - 1]) + parseInt(currentParenthesis[charactersIndex + 1]);
             currentParenthesis.splice(charactersIndex - 1, 3, result);
+            if (currentParenthesis.length === 4) {
+               currentParenthesis.splice(charactersIndex - 1, 0, '+');
+            }
             arrayOfAnswers.push(problemArray.slice(0, currentCoordinates[0]).join('') + currentParenthesis.join('') + problemArray.slice(currentCoordinates[1] + 1).join(''));
          } else if (currentParenthesis.includes('==')) {
             let result = false;
@@ -199,7 +202,7 @@ const solveArithmetic = (equationAsString, arrayOfAnswers) => {
             if (!((currentParenthesis[currentParenthesis.indexOf('||') - 1] === true || currentParenthesis[currentParenthesis.indexOf('||') - 1] === false) && (currentParenthesis[currentParenthesis.indexOf('||') + 1] === true || currentParenthesis[currentParenthesis.indexOf('||') + 1] === false))) {
                arrayOfAnswers.push('ERROR, NO SE PUEDE COMPARAR UN VALOR NUMERICO CON BOOLEANO EN: ' + currentParenthesis);
                currentParenthesis = ['(', 'error', ')'];
-               problemArray = 'error';
+               problemArray = 'error'; 
             } else {
                if (currentParenthesis[currentParenthesis.indexOf('||') - 1] === true || currentParenthesis[currentParenthesis.indexOf('||') + 1] === true) {
                   result = true;
@@ -327,11 +330,5 @@ const start = (raw) => {
 
    return solveArithmetic(arrayWithManyDigitNumbersCombined, arrayOfAnswers);
 };
-
-// const solver = {
-//    start: start(),
-//    result: new Promise ()
-// }
-
 
 export default start;

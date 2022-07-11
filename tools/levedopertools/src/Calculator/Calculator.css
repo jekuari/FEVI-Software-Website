@@ -1,10 +1,16 @@
 .navBar {
    height: 5rem;
    width: 100%;
-   background-color: #000d0d;
+   background-color: #000;
    display: flex;
    align-items: center;
    justify-content: space-between;
+}
+
+li {
+   list-style-type: disc;
+   box-sizing: content-box;
+   display: block;
 }
 
 .navBar img {
@@ -27,20 +33,19 @@
 }
 
 .OperatorCalcInput {
-  height: 3rem;
+  height: 4rem;
   width: 100%;
   font-size: 2rem;
   display: flex;
   text-align: center;
   align-items: flex-end;
   box-sizing: border-box;
-  border: 2px solid rgb(50, 50, 50);
-  border-radius: 0.5rem;
-  outline: 1px solid rgb(50,50,50);
-}
-
-.OperatorCalcInput:focus {
-   box-shadow: 0px 0px 10px black;
+  border: 2px solid rgb(0, 190, 174);
+  border-bottom-left-radius: 5rem;
+  border-top-left-radius: 5rem;
+  outline: 1px solid rgb(0, 190, 174);
+  color: #fff;
+  background-color: rgb(69, 69, 69);
 }
 
 .OperatorCalc form {
@@ -56,40 +61,82 @@
 
 .OperatorCalc form input[type="button"] {
   font-size: 2rem;
-  height: 3rem;
-  width: 10rem;
-  box-sizing: content-box;
-  background-color: rgb(0, 76, 65);
+  height: 4rem;
+  width: 100%;
+  background-color: rgb(0, 190, 174);
   color: white;
-  border-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  border-top-right-radius:5rem;
   outline: none;
   border: none;
+  box-sizing: border-box;
+  border: 2px solid rgb(0, 190, 174);
+  outline: 1px solid rgb(0, 190, 174);
 }
 
 .OperatorCalc form input[type="button"]:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 15px rgb(0, 190, 174);
+}
+
+.OperatorCalc form input[type="text"]:focus {
+   box-shadow: 0px 0px 15px rgb(0, 190, 174);
 }
 
 .OperatorCalc .Instructions {
    margin-top: 2rem;
   max-width: 90%;
-  border: 2px solid rgb(0, 76, 65);
+  border: 3px solid rgb(0, 190, 174);
   box-sizing: border-box;
   padding: 3rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
+  color: #fff; 
+  background-color: rgb(37, 37, 37);
+  text-decoration: none;
+  text-shadow: none;
 }
 
-.OperatorCalc .colorRed {
+.colorRed {
    color: red;
-   font-weight: 800;
+   font-weight: 400;
+   text-decoration: none;
+   text-shadow: none;
 }
 
 .OperatorCalc h2 {
-  font-size: 3rem;
-  color: rgb(0, 104, 89);
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: rgb(255, 255, 255);
   text-align: center;
   user-select: none;
+}
+
+.OperatorCalc h3 {
+   color: white;
+   font-size: 3rem;
+   margin-top: 2rem;
+}
+
+.resultsContainer {
+   width: max-content;
+   box-sizing: border-box;
+   min-width: 60%;
+   padding: 2rem;
+   margin-top: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-radius: 2rem;
+   color: #fff; 
+  background-color: rgb(37, 37, 37);
+  border: 3px solid rgb(0, 190, 174);
+}
+
+.resultsContainer p {
+   color: #fff;
+   font-size: 2rem;
+   margin-top: 1rem;
 }
 
 @media only screen and (max-width: 700px) {
@@ -111,11 +158,26 @@
       text-align: center;   
   }
 
+  .OperatorCalc form input[type="text"] {
+   border-radius: 15rem;
+  }
+
   .OperatorCalc form input[type="button"] {
    height: 4rem;
+   border-radius: 5rem;
   }
 
   .OperatorCalcInput {
    height: 4rem;
   }
+
+  .resultsContainer p {
+   color: #fff;
+   font-size: 1rem;
+}
+
+.resultsContainer {
+   width: 90%;
+}
+
 }
